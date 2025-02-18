@@ -1,25 +1,26 @@
 body {
-    font-family: Arial, sans-serif; font-size:14;
+    font-family: Arial, sans-serif; font-size:11;
   }
   
-#pres{color:#d8ad00; font-size:20;}
-#nom{font-size:20;}
-.titres{color:#d8ad00; font-size:15;}
+#pres{color:#d8ad00; font-size:15;}
+#nom{font-size:14;}
+.titres{color:#d8ad00; font-size:13;}
 
 body {
   display: grid;
   grid-template-columns:
-    100px 1fr;
+    130px 1fr;
   grid-template-areas:
   "gauche head"  
   "gauche m1";
 }
 #tete{
   grid-area: head;
+  padding: 20px;
 }
 #cases {
     grid-area: m1;
-    padding: 10px;
+    padding: 20px;
 }
 
 #barre{
@@ -27,4 +28,45 @@ body {
   background-color: #363432;
   color: white;
   padding: 10px;
+}
+
+.corps{
+  color: #413e3b;
+}
+.lieu{
+  color: #d8ad00;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+ul::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  background: black;
+}
+
+ul > li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+ul > li::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
 }
