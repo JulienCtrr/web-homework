@@ -9,7 +9,7 @@ body {
 body {
   display: grid;
   grid-template-columns:
-    130px 1fr;
+    150px 1fr;
   grid-template-areas:
   "gauche head"  
   "gauche m1";
@@ -25,9 +25,11 @@ body {
 
 #barre{
   grid-area: gauche;
+  font-size: 10;
   background-color: #363432;
-  color: white;
-  padding: 10px;
+  color: rgb(223, 223, 223);
+  padding: 20px;
+  line-height: 0.5;
 }
 
 .corps{
@@ -69,4 +71,32 @@ ul > li::before {
   height: 6px;
   background: black;
   border-radius: 50%;
+}
+
+.corps{ ul {
+  list-style: disc;
+  padding-left: 12px;
+  position: static; 
+}
+
+ul::before {
+  display: none; 
+}
+
+ul > li {
+  position: relative;
+  padding-left: 2px;
+  margin-bottom: 1px;
+}
+
+ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 0px;
+  height: 0px;
+  background: black;
+  border-radius: 50%;
+}
 }
