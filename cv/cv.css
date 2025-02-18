@@ -5,3 +5,26 @@ body {
 #pres{color:#d8ad00; font-size:20;}
 #nom{font-size:20;}
 .titres{color:#d8ad00; font-size:15;}
+
+body {
+  display: grid;
+  grid-template-columns:
+    100px 1fr;
+  grid-template-areas:
+  "gauche head"  
+  "gauche m1";
+}
+#tete{
+  grid-area: head;
+}
+#cases {
+    grid-area: m1;
+    padding: 10px;
+}
+
+#barre{
+  grid-area: gauche;
+  background-color: #363432;
+  color: white;
+  padding: 10px;
+}
